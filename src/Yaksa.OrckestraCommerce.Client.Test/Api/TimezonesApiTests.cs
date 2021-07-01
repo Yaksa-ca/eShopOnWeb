@@ -76,7 +76,7 @@ namespace Yaksa.OrckestraCommerce.Client.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string accept = null;
             //var response = instance.GetTimeZonesRequestGet(accept);
-            //Assert.IsType<List<TimeZone>>(response);
+            //Assert.IsType<List<Model.TimeZone>>(response);
         }
     }
 }

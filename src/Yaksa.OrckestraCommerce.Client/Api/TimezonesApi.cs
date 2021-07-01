@@ -58,7 +58,7 @@ namespace Yaksa.OrckestraCommerce.Client.Api
         /// <exception cref="Yaksa.OrckestraCommerce.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Accept Header</param>
         /// <returns>List&lt;TimeZone&gt;</returns>
-        List<TimeZone> GetTimeZonesRequestGet(string accept);
+        List<Model.TimeZone> GetTimeZonesRequestGet(string accept);
 
         /// <summary>
         /// Retrieve a list of all time zones - {GetTimeZonesRequest}
@@ -69,7 +69,7 @@ namespace Yaksa.OrckestraCommerce.Client.Api
         /// <exception cref="Yaksa.OrckestraCommerce.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Accept Header</param>
         /// <returns>ApiResponse of List&lt;TimeZone&gt;</returns>
-        ApiResponse<List<TimeZone>> GetTimeZonesRequestGetWithHttpInfo(string accept);
+        ApiResponse<List<Model.TimeZone>> GetTimeZonesRequestGetWithHttpInfo(string accept);
         #endregion Synchronous Operations
     }
 
@@ -114,7 +114,7 @@ namespace Yaksa.OrckestraCommerce.Client.Api
         /// <param name="accept">Accept Header</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;TimeZone&gt;</returns>
-        System.Threading.Tasks.Task<List<TimeZone>> GetTimeZonesRequestGetAsync(string accept, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<Model.TimeZone>> GetTimeZonesRequestGetAsync(string accept, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve a list of all time zones - {GetTimeZonesRequest}
@@ -126,7 +126,7 @@ namespace Yaksa.OrckestraCommerce.Client.Api
         /// <param name="accept">Accept Header</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;TimeZone&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TimeZone>>> GetTimeZonesRequestGetWithHttpInfoAsync(string accept, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<Model.TimeZone>>> GetTimeZonesRequestGetWithHttpInfoAsync(string accept, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -376,9 +376,9 @@ namespace Yaksa.OrckestraCommerce.Client.Api
         /// <exception cref="Yaksa.OrckestraCommerce.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Accept Header</param>
         /// <returns>List&lt;TimeZone&gt;</returns>
-        public List<TimeZone> GetTimeZonesRequestGet(string accept)
+        public List<Model.TimeZone> GetTimeZonesRequestGet(string accept)
         {
-            Yaksa.OrckestraCommerce.Client.Client.ApiResponse<List<TimeZone>> localVarResponse = GetTimeZonesRequestGetWithHttpInfo(accept);
+            Yaksa.OrckestraCommerce.Client.Client.ApiResponse<List<Model.TimeZone>> localVarResponse = GetTimeZonesRequestGetWithHttpInfo(accept);
             return localVarResponse.Data;
         }
 
@@ -388,7 +388,7 @@ namespace Yaksa.OrckestraCommerce.Client.Api
         /// <exception cref="Yaksa.OrckestraCommerce.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Accept Header</param>
         /// <returns>ApiResponse of List&lt;TimeZone&gt;</returns>
-        public Yaksa.OrckestraCommerce.Client.Client.ApiResponse<List<TimeZone>> GetTimeZonesRequestGetWithHttpInfo(string accept)
+        public Yaksa.OrckestraCommerce.Client.Client.ApiResponse<List<Model.TimeZone>> GetTimeZonesRequestGetWithHttpInfo(string accept)
         {
             // verify the required parameter 'accept' is set
             if (accept == null)
@@ -414,7 +414,7 @@ namespace Yaksa.OrckestraCommerce.Client.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<TimeZone>>("/timezones", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<Model.TimeZone>>("/timezones", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -432,9 +432,9 @@ namespace Yaksa.OrckestraCommerce.Client.Api
         /// <param name="accept">Accept Header</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;TimeZone&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TimeZone>> GetTimeZonesRequestGetAsync(string accept, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<Model.TimeZone>> GetTimeZonesRequestGetAsync(string accept, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Yaksa.OrckestraCommerce.Client.Client.ApiResponse<List<TimeZone>> localVarResponse = await GetTimeZonesRequestGetWithHttpInfoAsync(accept, cancellationToken).ConfigureAwait(false);
+            Yaksa.OrckestraCommerce.Client.Client.ApiResponse<List<Model.TimeZone>> localVarResponse = await GetTimeZonesRequestGetWithHttpInfoAsync(accept, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -445,7 +445,7 @@ namespace Yaksa.OrckestraCommerce.Client.Api
         /// <param name="accept">Accept Header</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;TimeZone&gt;)</returns>
-        public async System.Threading.Tasks.Task<Yaksa.OrckestraCommerce.Client.Client.ApiResponse<List<TimeZone>>> GetTimeZonesRequestGetWithHttpInfoAsync(string accept, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Yaksa.OrckestraCommerce.Client.Client.ApiResponse<List<Model.TimeZone>>> GetTimeZonesRequestGetWithHttpInfoAsync(string accept, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'accept' is set
             if (accept == null)
@@ -474,7 +474,7 @@ namespace Yaksa.OrckestraCommerce.Client.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<TimeZone>>("/timezones", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Model.TimeZone>>("/timezones", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

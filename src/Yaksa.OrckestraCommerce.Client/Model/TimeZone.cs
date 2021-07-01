@@ -29,7 +29,7 @@ namespace Yaksa.OrckestraCommerce.Client.Model
     /// TimeZone
     /// </summary>
     [DataContract(Name = "TimeZone")]
-    public partial class TimeZone : IEquatable<TimeZone>, IValidatableObject
+    public partial class TimeZone : IEquatable<Model.TimeZone>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeZone" /> class.
